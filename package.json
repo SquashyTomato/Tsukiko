@@ -1,0 +1,39 @@
+{
+  "name": "tsukiko",
+  "version": "1.0.0",
+  "description": "The Multipurpose Discord Bot For Weebs",
+  "main": "tsukiko.js",
+  "scripts": {
+    "start": "node . --harmony",
+    "noshard": "node bot.js --harmony",
+    "update": "npm install --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SquashyTomato/Tsukiko.git"
+  },
+  "author": "SquashyTomato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SquashyTomato/Tsukiko/issues"
+  },
+  "homepage": "https://github.com/SquashyTomato/Tsukiko#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "@sentry/node": "^5.15.5",
+    "axios": "^0.19.2",
+    "bufferutil": "^4.0.1",
+    "chalk": "^4.0.0",
+    "discord.js": "^12.2.0",
+    "erlpack": "github:discordapp/erlpack",
+    "libsodium-wrappers": "^0.7.6",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
+    "mysql": "^2.18.1",
+    "node-gyp": "^6.1.0",
+    "shoukaku": "^1.4.1",
+    "tinyurl": "^1.1.5",
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.6"
+  }
+}
