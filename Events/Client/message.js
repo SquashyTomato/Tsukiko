@@ -20,6 +20,7 @@ module.exports = (client, config, msg) => {
 
     // Message Handlers
     require('./../../Utils/Handlers/levelsHandler.js')(client, config, msg);
+    require('./../../Utils/Handlers/triggerHandler.js')(client, config, msg);
 
     // Check For Prefix
     if (!msg.content.startsWith(config.general.prefix)) return;
