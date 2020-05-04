@@ -9,7 +9,7 @@ module.exports = {
     // Command Information
     name: 'ping',
     alias: [],
-    description: 'Pong!',
+    description: 'Pong',
     category: 'Core',
     arguments: [],
     permission: 'OWNER',

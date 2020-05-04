@@ -14,7 +14,7 @@ module.exports = {
     // Command Information
     name: 'info',
     alias: [],
-    description: 'Get Information About Me',
+    description: 'Get information about me',
     category: 'Core',
     arguments: [],
     permission: 'ALL',

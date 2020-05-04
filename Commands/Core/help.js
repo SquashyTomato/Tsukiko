@@ -9,7 +9,7 @@ module.exports = {
     // Command Information
     name: 'help',
     alias: [],
-    description: 'Displays This Message',
+    description: 'Displays this message',
     category: 'Core',
     arguments: [],
     permission: 'ALL',
