@@ -35,20 +35,6 @@ module.exports = {
     },
 
     /* 
-     * formatDate
-     * Format Unix Time Into DD/MM/YYYY HH:MM
-     *
-     * @param (int) (ut) Unix Time Value
-     * @return (string) Formatted Time
-     */
-    formatDate(ut) {
-        ut = ut.toString();
-        ut = ut.substring(0, ut.length - 3);
-        ut = new Date(ut * 1000);
-        return parseInt(ut.getDate()) + '/' + parseInt(ut.getMonth() + 1) + '/' + parseInt(ut.getFullYear()) + ' ' + parseInt(ut.getHours()) + ':' + parseInt(ut.getMinutes()) + ':' + parseInt(ut.getSeconds());
-    },
-
-    /* 
      * shortenMsg
      * Shorten A Message To Be Under Discord's 2000 Character Limit
      *
