@@ -49,5 +49,21 @@ module.exports = {
             str = str + '...'
         }
         return str;
+    },
+
+    /* 
+     * checkURL
+     * Check If Value Contains A URL
+     *
+     * @param (string) (str) String To Check
+     * @return (bool) True If URL
+     */
+    checkURL(str) {
+        try {
+            new URL(string);
+            return true;
+        } catch (error) {
+            return false;
+        }
     }
 };
