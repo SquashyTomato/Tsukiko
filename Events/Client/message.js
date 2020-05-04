@@ -68,8 +68,9 @@ module.exports = (client, config, msg) => {
                     if (alertPrompt == true) return msg.channel.send(':negative_squared_cross_mark: | You require the `' + command.permission.toUpperCase() + '` permission to do this.').then(m => m.delete({ timeout: 5000 }).catch(console.error));
                     else return;
                 }
-            
-                // Check If Command Is NSFW
+
+                // Category Checks
+                if (command.category == 'Music' && !(msg.member.voice.channelID)) return msg.channel.send(':negative_squared_cross_mark: | You are not in a voice channel.');
                 if (command.category == 'NSFW' && !(msg.channel.nsfw)) return msg.channel.send(':underage: | NSFW Commands can only be ran in an NSFW channel.').then(m => m.delete({ timeout: 5000 }).catch(console.error));
             
                 // Check If Command Has Arguments
