@@ -12,7 +12,7 @@ module.exports = {
     description: 'Pong',
     category: 'Core',
     arguments: [],
-    permission: 'OWNER',
+    permission: 'ALL',
     
     // Command Script
     async execute(client, config, msg, args, raw) {
