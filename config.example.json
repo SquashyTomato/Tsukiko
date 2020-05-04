@@ -1,0 +1,45 @@
+{
+    "general": {
+        "token": "",
+        "invite": "",
+        "prefix": "-",
+        "color": "#3A5169"
+    },
+    "db": {
+        "host": "",
+        "port": "3306",
+        "username": "",
+        "password": "",
+        "database": "Tsukiko",
+        "limit": 1000
+    },
+    "lavalink": {
+        "server": [{
+            "name": "Lavalink",
+            "host": "localhost",
+            "port": 2333,
+            "auth": ""
+        }],
+        "options": {
+            "moveOnDisconnect": false,
+            "resumable": true,
+            "resumableTimeout": 30,
+            "reconnectTries": 3,
+            "restTimeout": 10000
+        }
+    },
+    "permissions": {
+        "owner": "109738696768516096",
+        "admin": []
+    },
+    "integration": {
+        "osu": "",
+        "sentry": "",
+        "twitch": {
+            "client": "",
+            "secret": ""
+        },
+        "weebapi": "",
+        "youtube": ""
+    }
+}
