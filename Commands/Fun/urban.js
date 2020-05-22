@@ -24,15 +24,15 @@ module.exports = {
         axios.get('http://api.urbandictionary.com/v0/define', { params: { term: raw } })
             .then(function (response) {
                 // Format Response Data
-                let define = response.data;
+                let data = response.data;
             
                 // Create Embed
                 const embed = new Discord.MessageEmbed()
                     .setColor(config.general.color)
-                    .addField('Word', define.list[0].word, false)
-                    .addField('Definition', define.list[0].definition, false)
-                    .addField('Rating', ':thumbsup: ' + define.list[0].thumbs_up + ' | :thumbsdown: ' + define.list[0].thumbs_down, false)
-                    .setFooter('Written On ' + define.list[0].written_on)
+                    .addField('Word', data.list[0].word, false)
+                    .addField('Definition', data.list[0].definition, false)
+                    .addField('Rating', ':thumbsup: ' + data.list[0].thumbs_up + ' | :thumbsdown: ' + data.list[0].thumbs_down, false)
+                    .setFooter('Written On ' + data.list[0].written_on)
 
                 // Send Embed
                 return msg.channel.send({embed: embed});
