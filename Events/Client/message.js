@@ -37,7 +37,12 @@ module.exports = (client, config, msg) => {
             con.query("SELECT `" + command.category.toLowerCase() + "_" + command.name + "` FROM `guilds_commands` WHERE `id` = " + msg.guild.id, function (err, result) {
                 if (result) {
                     let dbVal = command.category.toLowerCase() + "_" + command.name;
-                    if (result[0][dbVal] === 0) return;
+                    if (result[0][dbVal] === 0) {
+                        if (msg.author.id == config.permissions.owner || config.permissions.support.includes(msg.author.id) || msg.member.hasPermission(command.permission.toUpperCase(), false, false)) {
+                            msg.channel.send(':no_entry_sign: | This commmand has been disabled by a server administrator.').then(m => m.delete({ timeout: 5000 }).catch(console.error));
+                        }
+                        return;
+                    }
                 }
 
                 // Check Command Permissions
