@@ -20,8 +20,8 @@ module.exports = (client, config) => {
     client.on('guildDelete', async (guild) => e('Guild', 'guildDelete')(client, config, guild));
 
     // Guild Member Events
-    //client.on('guildMemberAdd', async (guildMember) => e('GuildMember', 'guildMemberAdd')(client, config, guildMember));
-    //client.on('guildMemberRemove', async (guildMember) => e('GuildMember', 'guildMemberRemove')(client, config, guildMember));
+    client.on('guildMemberAdd', async (guildMember) => e('GuildMember', 'guildMemberAdd')(client, config, guildMember));
+    client.on('guildMemberRemove', async (guildMember) => e('GuildMember', 'guildMemberRemove')(client, config, guildMember));
 
     // Message Events
     //client.on('messageDelete', async (msg) => e('Message', 'messageDelete')(client, config, msg));
