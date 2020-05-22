@@ -15,9 +15,7 @@ module.exports = {
     alias: [],
     description: 'Get information about a user',
     category: 'Utility',
-    arguments: [
-        {k: 'User', p: ''}
-    ],
+    arguments: [ {k: 'User', p: ''} ],
     permission: 'ALL',
     
     // Command Script

@@ -11,9 +11,7 @@ module.exports = {
     alias: [],
     description: 'Get someone\'s avatar',
     category: 'Utility',
-    arguments: [
-        {k: 'User', p: ''}
-    ],
+    arguments: [ {k: 'User', p: ''} ],
     permission: 'ALL',
     
     // Command Script
