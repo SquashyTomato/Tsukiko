@@ -17,11 +17,11 @@ module.exports = (client, config, msg) => {
         con.query("SELECT * FROM `guilds` WHERE `id` = " + msg.guild.id, function (err, result) {
             if (result[0].levels === 1) {
                 // Check If User Is In Database
-                con.query("SELECT * FROM `levels` WHERE `server` = " + msg.guild.id + " AND `user` = " + msg.author.id, function (err, levelResult) {
+                con.query("SELECT * FROM `levels` WHERE `guild` = " + msg.guild.id + " AND `user` = " + msg.author.id, function (err, levelResult) {
                     if (err) throw err;
                     // Add User If They Don't Exist
                     if (levelResult.length < 1) {
-                        con.query("INSERT INTO `levels` (`server`, `user`, `level`, `xp`, `time_last`) VALUES (" + msg.guild.id + ", " + msg.author.id + ", 0, " + parseInt(xpValue) + ", " + parseInt(currentTime) + ")", function (err, result) { if (err) throw err });
+                        con.query("INSERT INTO `levels` (`guild`, `user`, `level`, `xp`, `time_last`) VALUES (" + msg.guild.id + ", " + msg.author.id + ", 0, " + parseInt(xpValue) + ", " + parseInt(currentTime) + ")", function (err, result) { if (err) throw err });
                     // Check Existing Users Values
                     } else {
                         // If 2 Minutes Have Passed Since Last Level Up
@@ -45,7 +45,7 @@ module.exports = (client, config, msg) => {
                                 rec.send('Hey <@' + msg.author + '>, you are now Level **' + lvl + '**');
                             }
                             // Update XP Values
-                            con.query("UPDATE `levels` SET `level` = " + lvl + ", `xp` = " + parseInt(xpNew) + ", `message_count` = " + parseInt(msgNew) + ", `time_last` = " + parseInt(currentTime) + " WHERE `server` = " + msg.guild.id + " AND `user` = " + msg.author.id, function (err, result) { if (err) throw err });
+                            con.query("UPDATE `levels` SET `level` = " + lvl + ", `xp` = " + parseInt(xpNew) + ", `message_count` = " + parseInt(msgNew) + ", `time_last` = " + parseInt(currentTime) + " WHERE `guild` = " + msg.guild.id + " AND `user` = " + msg.author.id, function (err, result) { if (err) throw err });
                         }
                     }
                 });
