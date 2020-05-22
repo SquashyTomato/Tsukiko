@@ -18,10 +18,12 @@ module.exports = (client, config) => {
     // Guild Events
     client.on('guildCreate', async (guild) => e('Guild', 'guildCreate')(client, config, guild));
     client.on('guildDelete', async (guild) => e('Guild', 'guildDelete')(client, config, guild));
+    //client.on('guildUpdate', async (oldGuild, newGuild) => e('Guild', 'guildUpdate')(client, config, oldGuild, newGuild));
 
     // Guild Member Events
     client.on('guildMemberAdd', async (guildMember) => e('GuildMember', 'guildMemberAdd')(client, config, guildMember));
     client.on('guildMemberRemove', async (guildMember) => e('GuildMember', 'guildMemberRemove')(client, config, guildMember));
+    //client.on('guildMemberUpdate', async (oldGuildMember, newGuildMember) => e('GuildMember', 'guildMemberUpdate')(client, config, oldGuildMember, newGuildMember));
 
     // Message Events
     client.on('messageDelete', async (msg) => e('Message', 'messageDelete')(client, config, msg));
@@ -30,10 +32,12 @@ module.exports = (client, config) => {
     // Channel Events
     client.on('channelCreate', async (channel) => e('Channel', 'channelCreate')(client, config, channel));
     client.on('channelDelete', async (channel) => e('Channel', 'channelDelete')(client, config, channel));
+    //client.on('channelUpdate', async (oldChannel, newChannel) => e('Channel', 'channelUpdate')(client, config, oldChannel, newChannel));
 
     // Roles Events
     client.on('roleCreate', async (role) => e('Role', 'roleCreate')(client, config, role));
     client.on('roleDelete', async (role) => e('Role', 'roleDelete')(client, config, role));
+    //client.on('roleUpdate', async (oldRole, newRole) => e('Role', 'roleUpdate')(client, config, oldRole, newRole));
 
     // Shoukaku Events
     client.shoukaku.on('ready', async (name) => e('Shoukaku', 'ready')(client, config, name));
