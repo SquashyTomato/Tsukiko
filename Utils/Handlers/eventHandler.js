@@ -32,8 +32,8 @@ module.exports = (client, config) => {
     client.on('channelDelete', async (channel) => e('Channel', 'channelDelete')(client, config, channel));
 
     // Roles Events
-    //client.on('roleCreate', async (role) => e('Role', 'roleCreate')(client, config, role));
-    //client.on('roleDelete', async (role) => e('Role', 'roleDelete')(client, config, role));
+    client.on('roleCreate', async (role) => e('Role', 'roleCreate')(client, config, role));
+    client.on('roleDelete', async (role) => e('Role', 'roleDelete')(client, config, role));
 
     // Shoukaku Events
     client.shoukaku.on('ready', async (name) => e('Shoukaku', 'ready')(client, config, name));
