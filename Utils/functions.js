@@ -65,5 +65,17 @@ module.exports = {
         } catch (error) {
             return false;
         }
+    },
+
+    /* 
+     * channelName
+     * Get Channel Name For Apropriate Channel Type
+     *
+     * @param (class) (channel) Channel Class To Check
+     * @return (string) Channel Name
+     */
+    channelName(channel) {
+        if (channel.type == 'text') return '#' + channel.name;
+        else return channel.name;
     }
 };

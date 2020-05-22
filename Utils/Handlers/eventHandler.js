@@ -28,8 +28,8 @@ module.exports = (client, config) => {
     client.on('messageUpdate', async (oldMsg, newMsg) => e('Message', 'messageUpdate')(client, config, oldMsg, newMsg));
 
     // Channel Events
-    //client.on('channelCreate', async (channel) => e('Channel', 'channelCreate')(client, config, channel));
-    //client.on('channelDelete', async (channel) => e('Channel', 'channelDelete')(client, config, channel));
+    client.on('channelCreate', async (channel) => e('Channel', 'channelCreate')(client, config, channel));
+    client.on('channelDelete', async (channel) => e('Channel', 'channelDelete')(client, config, channel));
 
     // Roles Events
     //client.on('roleCreate', async (role) => e('Role', 'roleCreate')(client, config, role));
