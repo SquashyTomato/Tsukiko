@@ -24,8 +24,8 @@ module.exports = (client, config) => {
     client.on('guildMemberRemove', async (guildMember) => e('GuildMember', 'guildMemberRemove')(client, config, guildMember));
 
     // Message Events
-    //client.on('messageDelete', async (msg) => e('Message', 'messageDelete')(client, config, msg));
-    //client.on('messageUpdate', async (oldMsg, newMsg) => e('Message', 'messageUpdate')(client, config, oldMsg, newMsg));
+    client.on('messageDelete', async (msg) => e('Message', 'messageDelete')(client, config, msg));
+    client.on('messageUpdate', async (oldMsg, newMsg) => e('Message', 'messageUpdate')(client, config, oldMsg, newMsg));
 
     // Channel Events
     //client.on('channelCreate', async (channel) => e('Channel', 'channelCreate')(client, config, channel));
