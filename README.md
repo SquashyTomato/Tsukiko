@@ -1,5 +1,7 @@
 # Tsukiko
-[![Discord](https://discordapp.com/api/guilds/705940785744314370/widget.png)](https://discord.gg/b69tdYU)
+
+## This repo is no longer maintained as [the new bot](https://ariyabot.xyz) has been rewritten completely, feel free to use this codebase to learn however expect some things to be broken.
+
 [![Discord.js](https://img.shields.io/badge/Discord-js-orange)](https://github.com/discordjs/discord.js)
 [![SemVer](https://img.shields.io/badge/SemVer-Versioning-black)](http://semver.org)
 
